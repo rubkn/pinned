@@ -7,8 +7,6 @@ export default function Home() {
   const [username, setUsername] = useState("");
   const router = useRouter();
 
-  console.log("username", username);
-
   const usernameHandler = (event: any) => {
     setUsername(event.target.value);
   };
