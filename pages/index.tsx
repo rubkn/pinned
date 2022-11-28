@@ -109,6 +109,10 @@ export default function Home() {
               /api/user/vercel
             </Link>
           </p>
+          <p className="mt-4 text-sm">
+            Note: This app is still in development, features may be added or
+            removed in the future.
+          </p>
         </div>
       </main>
 
@@ -116,7 +120,7 @@ export default function Home() {
         <span>
           Developed by{" "}
           <Link href="https://rubenbrandao.com" className="font-bold">
-            rvk
+            ruvk
           </Link>
         </span>
         <span>
