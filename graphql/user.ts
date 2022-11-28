@@ -1,6 +1,6 @@
 import { gql } from "@apollo/client";
 
-import userClient from "./user-client";
+import userClient from "./userClient";
 
 const GET_PINNED_REPOS = gql`
   query user($username: String!) {
