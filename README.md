@@ -1,12 +1,12 @@
-# gpin
+# pinned
 
-## What is gpin?
+## What is pinned?
 
-**gpin**, and abbreviation for GitHub Pinned is a simple API service that allows you to get the pinned repositories of any github user.
+**pinned**, is a simple API service that allows you to get the pinned repositories of any github user.
 
-## How to use ghpin?
+## How to use pinned?
 
-To use gpin, you just need to make a GET request to gpin API with the username of the github user you want to get the pinned repos from.
+To use pinned, you just need to make a GET request to the pinned API with the username of the github user you want to get the pinned repos from.
 
 The API will return a JSON with the pinned repos of the user.
 
@@ -19,7 +19,7 @@ For example, to get the [Vercel](https://vercel.com/) pinned repositories, you j
 ## How to run this project?
 
 ```bash
-git clone https://github.com/ruvkn/ghpin
+git clone https://github.com/ruvkn/pinned
 cd ghpin
 yarn
 yarn dev
