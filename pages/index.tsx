@@ -18,7 +18,7 @@ export default function Home() {
   return (
     <div className="font-sans">
       <Head>
-        <title>ghpin by rvk</title>
+        <title>pinned.ruvk.dev</title>
         <meta
           name="description"
           content="api service to get pinned repos on github"
@@ -45,12 +45,12 @@ export default function Home() {
         <div>
           {/* intro */}
           <h2 className="text-2xl font-bold mt-12">
-            What is <span className="font-bold font-mono">ghpin</span>?
+            What is <span className="font-bold font-mono">pinned</span>?
           </h2>
           <p className="mt-4">
-            <span className="font-bold font-mono">ghpin</span>, and abbreviation
-            for GitHub Pinned is a simple API service that allows you to get the
-            pinned repositories of any github user.
+            <span className="font-bold font-mono">pinned</span> is a simple API
+            service that allows you to get the pinned repositories of any github
+            user.
           </p>
 
           {/* input and button */}
@@ -71,12 +71,12 @@ export default function Home() {
 
           {/* how-to */}
           <h2 className="text-2xl font-bold mt-12">
-            How to use <span className="font-bold font-mono">ghpin</span>?
+            How to use <span className="font-bold font-mono">pinned</span>?
           </h2>
           <p className="mt-4">
-            To use <span className="font-bold font-mono">ghpin</span>, you just
+            To use <span className="font-bold font-mono">pinned</span>, you just
             need to make a GET request to{" "}
-            <span className="font-bold font-mono">ghpin</span> API with the
+            <span className="font-bold font-mono">pinned</span> API with the
             username of the github user you want to get the pinned repos from.
           </p>
           <p className="mt-4">
