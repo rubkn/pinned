@@ -20,7 +20,7 @@ For example, to get the [Vercel](https://vercel.com/) pinned repositories, you j
 
 ```bash
 git clone https://github.com/ruvkn/pinned
-cd ghpin
+cd pinned
 yarn
 yarn dev
 ```
