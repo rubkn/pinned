@@ -1,20 +1,18 @@
 import { NextApiRequest, NextApiResponse } from "next";
-import { getPinnedRepos } from "../../../graphql";
-import { User, Error } from "../../../interfaces";
+import { getPinnedRepos } from "@pinned/graphql/user";
+import { UserPins, Error } from "@pinned/utils/types";
 
 export default async function handler(
   req: NextApiRequest,
-  res: NextApiResponse<User | Error>
+  res: NextApiResponse<UserPins | Error>
 ) {
-  console.log("req.query.uid", req.query);
-
   const { uid } = req.query;
 
   if (!uid) {
     return res.status(400).json({ message: "username is required" });
   }
 
-  const { user } = await getPinnedRepos(uid as string);
+  const response = await getPinnedRepos(uid as string);
 
-  return res.status(200).json({ user });
+  return res.status(200).json(response);
 }
