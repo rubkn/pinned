@@ -7,18 +7,18 @@ export default function Home() {
   const [username, setUsername] = useState("");
   const router = useRouter();
 
-  const usernameHandler = (event: any) => {
+  const usernameHandler = (event: any): void => {
     setUsername(event.target.value);
   };
 
-  const getPinnedRepos = async () => {
-    router.push(`/api/user/${username}`);
+  const getPinnedRepos = async (): Promise<void> => {
+    await router.push(`/api/user/${username}`);
   };
 
   return (
     <div className="font-sans">
       <Head>
-        <title>pinned.ruvk.dev</title>
+        <title>pinned.rubkn.dev</title>
         <meta
           name="description"
           content="api service to get pinned repos on github"
@@ -54,7 +54,7 @@ export default function Home() {
           </p>
 
           {/* input and button */}
-          <div className="flex flex-col mt-4 m-auto">
+          <div className="flex flex-col mt-4 m-auto text-neutral-900">
             <input
               type="text"
               placeholder="Enter a github username"
@@ -116,11 +116,12 @@ export default function Home() {
         </div>
       </main>
 
+      {/* footer */}
       <footer className="flex flex-col p-6 sm:p-12">
         <span>
           Developed by{" "}
           <Link href="https://rubenbrandao.com" className="font-bold">
-            ruvk
+            rubkn
           </Link>
         </span>
         <span>
