@@ -19,7 +19,7 @@ For example, to get the [Vercel](https://vercel.com/) pinned repositories, you j
 ## How to run this project?
 
 ```bash
-git clone https://github.com/ruvkn/pinned
+git clone https://github.com/rubkn/pinned
 cd pinned
 yarn
 yarn dev
