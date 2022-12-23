@@ -6,6 +6,10 @@ export default async function handler(
   req: NextApiRequest,
   res: NextApiResponse<UserPins | Error>
 ) {
+  console.log("req", req);
+
+  console.log("req.query", req.query);
+
   const { uid } = req.query;
 
   if (!uid) {
