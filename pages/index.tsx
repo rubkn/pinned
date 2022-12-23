@@ -79,17 +79,15 @@ export default function Home() {
             </p>
             <p className="py-2">
               For example, to get the{" "}
-              <Link
-                href="
-              www.vercel.com"
+              <a
+                href="//vercel.com"
                 className="text-blue-600 hover:text-blue-800"
               >
                 Vercel
-              </Link>{" "}
+              </a>{" "}
               pinned repositories, you just need to make a GET request to{" "}
               <Link
-                href="
-              /api/user/vercel"
+                href="/api/user/vercel"
                 className="text-blue-600 hover:text-blue-800"
               >
                 /api/user/vercel
@@ -107,21 +105,18 @@ export default function Home() {
         <footer className="flex flex-col">
           <span>
             Developed by{" "}
-            <Link
-              href="www.rubenbrandao.com"
+            <a
+              href="//rubenbrandao.com"
               className="font-bold hover:text-blue-600"
             >
               rubkn
-            </Link>
+            </a>
           </span>
           <span>
             Powered by{" "}
-            <Link
-              href="www.vercel.com/"
-              className="font-bold hover:text-blue-600"
-            >
+            <a href="//vercel.com/" className="font-bold hover:text-blue-600">
               Vercel
-            </Link>
+            </a>
           </span>
         </footer>
       </main>
