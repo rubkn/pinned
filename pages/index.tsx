@@ -93,7 +93,7 @@ export default function Home() {
                 /api/user/vercel
               </Link>
             </p>
-            <p className="py-2 text-sm">
+            <p className="py-4 text-xs text-neutral-500">
               Note: This app is still in development, features may be added or
               removed in the future.
             </p>
