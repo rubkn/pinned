@@ -49,3 +49,28 @@ export type UserPins = {
     }[];
   }[];
 };
+
+export type Pin = {
+  node: {
+    name: string;
+    description: string;
+    url: string;
+    stargazerCount: number;
+    forkCount: number;
+    languages: {
+      edges: {
+        node: {
+          name: string;
+          color: string;
+        };
+      }[];
+    };
+  };
+};
+
+export type Language = {
+  node: {
+    name: string;
+    color: string;
+  };
+};
