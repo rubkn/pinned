@@ -1,4 +1,4 @@
-import { Response } from "@pinned/utils/types";
+import { Language, Pin, Response } from "@pinned/utils/types";
 
 const transformUserPins = (response: Response) => {
   const {
@@ -24,7 +24,7 @@ const transformUserPins = (response: Response) => {
   };
 };
 
-const transformPinnedItems = (pins: any) => {
+const transformPinnedItems = (pins: Pin[]) => {
   return pins.map((pin: { node: any }) => {
     const {
       node: {
@@ -50,14 +50,10 @@ const transformPinnedItems = (pins: any) => {
   });
 };
 
-const transformLanguages = (langs: any) => {
-  return langs.reduce((acc: any, curr: any) => {
-    const {
-      node: { name },
-    } = curr;
-    acc.push(name);
-    return acc;
-  }, []);
+const transformLanguages = (langs: Language[]) => {
+  return langs.reduce((acc: any, { node: { name, color } }) => {
+    return { ...acc, [name]: color };
+  }, {});
 };
 
 export { transformUserPins, transformPinnedItems, transformLanguages };
