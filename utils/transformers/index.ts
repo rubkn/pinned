@@ -51,7 +51,7 @@ const transformPinnedItems = (pins: Pin[]) => {
 };
 
 const transformLanguages = (langs: Language[]) => {
-  return langs.reduce((acc: any, { node: { name, color } }) => {
+  return langs.slice(0, 2).reduce((acc: any, { node: { name, color } }) => {
     return { ...acc, [name]: color };
   }, {});
 };
