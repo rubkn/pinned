@@ -24,7 +24,7 @@ const GET_PINNED_REPOS = gql`
               url
               stargazerCount
               forkCount
-              languages(first: 3) {
+              languages(first: 2, orderBy: { field: SIZE, direction: DESC }) {
                 edges {
                   node {
                     name
