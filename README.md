@@ -2,19 +2,19 @@
 
 ## What is pinned?
 
-**pinned**, is a simple API service that allows you to get the pinned repositories of any github user.
+**pinned**, is a simple API service that allows you to get the pinned repositories of any GitHub user.
 
 ## How to use pinned?
 
-To use pinned, you just need to make a GET request to the pinned API with the username of the github user you want to get the pinned repos from.
-
-The API will return a JSON with the pinned repos of the user.
-
 The API is available at `/api/user/[username]`
 
-You can use the API with the username of any github user.
+To use pinned, you just need to make a GET request to the API with the username of the GitHub user you want to get the pinned repositories from.
 
-For example, to get the [Vercel](https://vercel.com/) pinned repositories, you just need to make a GET request to `/api/user/vercel`
+The API will return a JSON with the pinned repositories of the user.
+
+You can use the API with the username of any GitHub user.
+
+For example, to get my pinned repositories, you just need to make a GET request to `/api/user/rubkn`
 
 ## How to run this project?
 
