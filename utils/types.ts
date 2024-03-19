@@ -17,6 +17,7 @@ export type Response = {
         url: string;
         stargazerCount: number;
         forkCount: number;
+        homepageUrl: string;
         languages: {
           edges: {
             node: {
@@ -43,6 +44,7 @@ export type UserPins = {
     url: string;
     stargazerCount: number;
     forkCount: number;
+    homepageUrl: string;
     languages: {
       name: string;
       color: string;
@@ -57,6 +59,7 @@ export type Pin = {
     url: string;
     stargazerCount: number;
     forkCount: number;
+    homepageUrl: string;
     languages: {
       edges: {
         node: {

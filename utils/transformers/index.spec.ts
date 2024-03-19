@@ -17,7 +17,8 @@ describe("transformUserPins", () => {
           url: "https://github.com/johndoe/repo1",
           stargazerCount: 100,
           forkCount: 50,
-          languages: { JavaScript: "#f1e05a", TypeScript: "#2b7489" },
+          homepageUrl: "XXXXXXXXXXXXXXXXXXX",
+          languages: { JavaScript: "#f1e05a", TypeScript: "#2b7489" }
         },
         {
           name: "repo2",
@@ -25,9 +26,10 @@ describe("transformUserPins", () => {
           url: "https://github.com/johndoe/repo2",
           stargazerCount: 200,
           forkCount: 100,
-          languages: { JavaScript: "#f1e05a" },
-        },
-      ],
+          homepageUrl: "XXXXXXXXXXXXXXXXXXX",
+          languages: { JavaScript: "#f1e05a" }
+        }
+      ]
     };
 
     expect(transformUserPins(sampleResponse)).toEqual(expectedResult);

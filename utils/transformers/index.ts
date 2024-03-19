@@ -33,8 +33,9 @@ const transformPinnedItems = (pins: Pin[]) => {
         url,
         stargazerCount,
         forkCount,
-        languages: { edges: langs },
-      },
+        homepageUrl,
+        languages: { edges: langs }
+      }
     } = pin;
 
     const languages = transformLanguages(langs);
@@ -45,7 +46,8 @@ const transformPinnedItems = (pins: Pin[]) => {
       url,
       stargazerCount,
       forkCount,
-      languages,
+      homepageUrl,
+      languages
     };
   });
 };

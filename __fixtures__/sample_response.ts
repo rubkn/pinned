@@ -14,6 +14,7 @@ export default {
           url: "https://github.com/johndoe/repo1",
           stargazerCount: 100,
           forkCount: 50,
+          homepageUrl: "XXXXXXXXXXXXXXXXXXX",
           languages: {
             edges: [
               {
@@ -39,6 +40,7 @@ export default {
           url: "https://github.com/johndoe/repo2",
           stargazerCount: 200,
           forkCount: 100,
+          homepageUrl: "XXXXXXXXXXXXXXXXXXX",
           languages: {
             edges: [
               {
