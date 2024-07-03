@@ -1,6 +1,6 @@
 import { NextApiRequest, NextApiResponse } from "next";
-import { getPinnedRepos } from "@pinned/graphql";
-import { UserPins, Error } from "@pinned/utils/types";
+import { getPinnedRepos } from "@/graphql";
+import { UserPins, Error } from "@/lib/types";
 
 export default async function handler(
   req: NextApiRequest,

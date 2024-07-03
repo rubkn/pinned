@@ -1,4 +1,4 @@
-import { Language, Pin, Response } from "@pinned/utils/types";
+import { Language, Pin, Response } from "@/lib/types";
 
 const transformUserPins = (response: Response) => {
   const {
@@ -34,8 +34,8 @@ const transformPinnedItems = (pins: Pin[]) => {
         stargazerCount,
         forkCount,
         homepageUrl,
-        languages: { edges: langs }
-      }
+        languages: { edges: langs },
+      },
     } = pin;
 
     const languages = transformLanguages(langs);
@@ -47,7 +47,7 @@ const transformPinnedItems = (pins: Pin[]) => {
       stargazerCount,
       forkCount,
       homepageUrl,
-      languages
+      languages,
     };
   });
 };
