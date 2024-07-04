@@ -1,14 +1,16 @@
-import { Language, Pin, Response } from "@pinned/utils/types";
+import { Language, Pin, Response } from "@/lib/types";
 
-const transformUserPins = (response: Response) => {
+export function transformUserPins(response: Response) {
   const {
-    name,
-    bio,
-    company,
-    twitterUsername,
-    websiteUrl,
-    url,
-    pinnedItems: { edges: pins },
+    user: {
+      name,
+      bio,
+      company,
+      twitterUsername,
+      websiteUrl,
+      url,
+      pinnedItems: { edges: pins },
+    },
   } = response;
 
   const pinnedItems = transformPinnedItems(pins);
@@ -22,9 +24,9 @@ const transformUserPins = (response: Response) => {
     url,
     pinnedItems,
   };
-};
+}
 
-const transformPinnedItems = (pins: Pin[]) => {
+function transformPinnedItems(pins: Pin[]) {
   return pins.map((pin: { node: any }) => {
     const {
       node: {
@@ -34,8 +36,8 @@ const transformPinnedItems = (pins: Pin[]) => {
         stargazerCount,
         forkCount,
         homepageUrl,
-        languages: { edges: langs }
-      }
+        languages: { edges: langs },
+      },
     } = pin;
 
     const languages = transformLanguages(langs);
@@ -47,15 +49,13 @@ const transformPinnedItems = (pins: Pin[]) => {
       stargazerCount,
       forkCount,
       homepageUrl,
-      languages
+      languages,
     };
   });
-};
+}
 
-const transformLanguages = (langs: Language[]) => {
+function transformLanguages(langs: Language[]) {
   return langs.reduce((acc: any, { node: { name, color } }) => {
     return { ...acc, [name]: color };
   }, {});
-};
-
-export { transformUserPins, transformPinnedItems, transformLanguages };
+}

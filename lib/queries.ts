@@ -1,8 +1,7 @@
-import { gql } from "@apollo/client";
-import { UserPins } from "@pinned/utils/types";
-import { transformUserPins } from "@pinned/utils/transformers";
-
-import userClient from "./client";
+import client from "./gql";
+import { gql } from "graphql-request";
+import { transformUserPins } from "@/lib/transformers";
+import { Response, User } from "./types";
 
 const GET_PINNED_REPOS = gql`
   query user($username: String!) {
@@ -41,13 +40,10 @@ const GET_PINNED_REPOS = gql`
   }
 `;
 
-export const getPinnedRepos = async (username: string): Promise<UserPins> => {
-  const {
-    data: { user },
-  } = await userClient.query({
-    query: GET_PINNED_REPOS,
-    variables: { username },
+export const getPinnedRepos = async (username: string) => {
+  const data: Response = await client.request(GET_PINNED_REPOS, {
+    username,
   });
 
-  return transformUserPins(user);
+  return transformUserPins(data);
 };
