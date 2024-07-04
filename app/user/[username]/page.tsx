@@ -10,7 +10,6 @@ export default async function UserPinnedReposPage({
   if (!username) throw new Error("Username is required");
 
   const data = await getPinnedRepos(username);
-  console.log(data);
 
   return (
     <main className="p-6 m-auto flex w-full flex-col text-base font-light leading-relaxed antialiased shadow-2xl">
