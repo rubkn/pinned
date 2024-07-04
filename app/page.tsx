@@ -1,21 +1,7 @@
-"use client";
-
 import Link from "next/link";
-import { useRouter } from "next/navigation";
-import { useState } from "react";
+import SearchUsername from "./_components/search-username-button";
 
 export default function Home() {
-  const [username, setUsername] = useState("");
-  const router = useRouter();
-
-  const usernameHandler = (event: any): void => {
-    setUsername(event.target.value);
-  };
-
-  const getPinnedRepos = async (): Promise<void> => {
-    await router.push(`/user/${username}`);
-  };
-
   return (
     <main className="font-sans p-6 sm:p-12">
       <section className="text-lg text-neutral-200 ">
@@ -37,20 +23,7 @@ export default function Home() {
           </p>
 
           {/* input and button */}
-          <div className="flex flex-col mt-4 m-auto text-neutral-900">
-            <input
-              type="text"
-              placeholder="Enter a github username"
-              className="px-4 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-blue-600 focus:border-transparent"
-              onChange={usernameHandler}
-            />
-            <button
-              className="mt-4 inline-block px-4 py-2 text-sm font-medium text-white bg-blue-600 border border-transparent rounded-md hover:bg-blue-700 focus:outline-none focus-visible:ring-2 focus-visible:ring-offset-2 focus-visible:ring-blue-500"
-              onClick={getPinnedRepos}
-            >
-              Get pinned repos
-            </button>
-          </div>
+          <SearchUsername />
 
           {/* how-to */}
           <h2 className="text-2xl font-bold mt-12">
