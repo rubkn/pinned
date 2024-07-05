@@ -9,6 +9,7 @@ export function transformUserPins(response: Response) {
       twitterUsername,
       websiteUrl,
       url,
+      avatarUrl,
       pinnedItems: { edges: pins },
     },
   } = response;
@@ -22,6 +23,7 @@ export function transformUserPins(response: Response) {
     twitterUsername,
     websiteUrl,
     url,
+    avatarUrl,
     pinnedItems,
   };
 }

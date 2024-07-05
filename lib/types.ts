@@ -10,6 +10,7 @@ export type Response = {
     twitterUsername: string;
     websiteUrl: string;
     url: string;
+    avatarUrl: string;
     pinnedItems: {
       totalCount: number;
       edges: {
@@ -41,6 +42,7 @@ export type User = {
   twitterUsername: string;
   websiteUrl: string;
   url: string;
+  avatarUrl: string;
   pinnedItems: {
     name: string;
     description: string;
