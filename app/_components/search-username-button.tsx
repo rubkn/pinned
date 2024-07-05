@@ -19,22 +19,19 @@ export default function SearchUsername() {
   };
 
   return (
-    <form
-      onSubmit={handleFormSubmit}
-      className="flex flex-col mt-4 m-auto text-neutral-900"
-    >
+    <form onSubmit={handleFormSubmit} className="flex gap-2">
       <input
         type="text"
-        placeholder="Enter a github username"
-        className="px-4 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-blue-600 focus:border-transparent"
+        className="text-black flex h-10 w-full rounded-md border border-input bg-background px-3 py-2 text-sm ring-offset-background file:border-0 file:bg-transparent file:text-sm file:font-medium placeholder:text-muted-foreground focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 disabled:cursor-not-allowed disabled:opacity-50 max-w-lg flex-1"
+        placeholder="Enter your GitHub username"
         value={username}
         onChange={usernameHandler}
       />
       <button
         disabled={username.length === 0}
-        type="submit"
         onClick={() => router.push(`/api/${username}`)}
-        className="mt-4 inline-block px-4 py-2 text-sm font-medium text-white bg-blue-600 border border-transparent rounded-md hover:bg-blue-700 focus:outline-none focus-visible:ring-2 focus-visible:ring-offset-2 focus-visible:ring-blue-500"
+        className="inline-flex items-center justify-center whitespace-nowrap rounded-md text-sm font-medium ring-offset-background transition-colors focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 disabled:pointer-events-none disabled:opacity-50 bg-primary text-primary-foreground hover:bg-primary/90 h-10 px-4 py-2"
+        type="submit"
       >
         Submit
       </button>
