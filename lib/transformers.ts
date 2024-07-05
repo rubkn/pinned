@@ -3,6 +3,7 @@ import { Language, Pin, Response } from "@/lib/types";
 export function transformUserPins(response: Response) {
   const {
     user: {
+      login,
       name,
       bio,
       company,
@@ -17,6 +18,7 @@ export function transformUserPins(response: Response) {
   const pinnedItems = transformPinnedItems(pins);
 
   return {
+    login,
     name,
     bio,
     company,

@@ -4,6 +4,7 @@ export type Error = {
 
 export type Response = {
   user: {
+    login: string;
     name: string;
     company: string | null;
     bio: string;
@@ -36,6 +37,7 @@ export type Response = {
 };
 
 export type User = {
+  login: string;
   name: string;
   bio: string;
   company: string;

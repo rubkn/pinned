@@ -6,9 +6,10 @@ import { Response } from "./types";
 const GET_PINNED_REPOS = gql`
   query user($username: String!) {
     user(login: $username) {
+      login
       name
-      company
       bio
+      company
       twitterUsername
       websiteUrl
       url
