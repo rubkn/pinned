@@ -1,17 +1,19 @@
 import client from "./gql";
 import { gql } from "graphql-request";
 import { transformUserPins } from "@/lib/transformers";
-import { Response, User } from "./types";
+import { Response } from "./types";
 
 const GET_PINNED_REPOS = gql`
   query user($username: String!) {
     user(login: $username) {
+      login
       name
-      company
       bio
+      company
       twitterUsername
       websiteUrl
       url
+      avatarUrl
       pinnedItems(first: 6) {
         totalCount
         edges {

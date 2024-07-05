@@ -4,12 +4,14 @@ export type Error = {
 
 export type Response = {
   user: {
+    login: string;
     name: string;
     company: string | null;
     bio: string;
     twitterUsername: string;
     websiteUrl: string;
     url: string;
+    avatarUrl: string;
     pinnedItems: {
       totalCount: number;
       edges: {
@@ -35,12 +37,14 @@ export type Response = {
 };
 
 export type User = {
+  login: string;
   name: string;
   bio: string;
   company: string;
   twitterUsername: string;
   websiteUrl: string;
   url: string;
+  avatarUrl: string;
   pinnedItems: {
     name: string;
     description: string;
